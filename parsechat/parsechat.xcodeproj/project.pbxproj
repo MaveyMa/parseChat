@@ -17,6 +17,7 @@
 		DB00857620450701002850B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB00857420450701002850B5 /* LaunchScreen.storyboard */; };
 		DB00858120450701002850B5 /* parsechatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00858020450701002850B5 /* parsechatTests.swift */; };
 		DB00858C20450701002850B5 /* parsechatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00858B20450701002850B5 /* parsechatUITests.swift */; };
+		DB15BCA32045281800372298 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15BCA22045281800372298 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		DB00858720450701002850B5 /* parsechatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = parsechatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB00858B20450701002850B5 /* parsechatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsechatUITests.swift; sourceTree = "<group>"; };
 		DB00858D20450701002850B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB15BCA22045281800372298 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E64D339BBC834D592221BFFB /* Pods-parsechatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parsechatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-parsechatTests/Pods-parsechatTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 			children = (
 				DB00856B20450701002850B5 /* AppDelegate.swift */,
 				DB00856D20450701002850B5 /* LoginViewController.swift */,
+				DB15BCA22045281800372298 /* ChatViewController.swift */,
 				DB00856F20450701002850B5 /* Main.storyboard */,
 				DB00857220450701002850B5 /* Assets.xcassets */,
 				DB00857420450701002850B5 /* LaunchScreen.storyboard */,
@@ -461,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB00856E20450701002850B5 /* LoginViewController.swift in Sources */,
+				DB15BCA32045281800372298 /* ChatViewController.swift in Sources */,
 				DB00856C20450701002850B5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

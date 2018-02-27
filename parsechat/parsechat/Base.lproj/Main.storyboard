@@ -10,6 +10,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Chat-->
+        <scene sceneID="zNN-ri-fQ1">
+            <objects>
+                <viewController id="yrW-xQ-It0" customClass="ChatViewController" customModule="parsechat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x4x-u4-RFd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5c-mX-IID">
+                                <rect key="frame" x="323" y="72" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="onSend:" destination="yrW-xQ-It0" eventType="touchUpInside" id="6Hv-JL-dxR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KF2-sq-huF">
+                                <rect key="frame" x="8" y="72" width="299" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l5c-mX-IID" firstAttribute="leading" secondItem="KF2-sq-huF" secondAttribute="trailing" constant="16" id="3qA-Xt-RAc"/>
+                            <constraint firstItem="KF2-sq-huF" firstAttribute="leading" secondItem="dqp-sI-DVe" secondAttribute="leading" constant="8" id="iHR-mW-id6"/>
+                            <constraint firstItem="dqp-sI-DVe" firstAttribute="trailing" secondItem="l5c-mX-IID" secondAttribute="trailing" constant="16" id="jbC-sl-qnz"/>
+                            <constraint firstItem="KF2-sq-huF" firstAttribute="top" secondItem="dqp-sI-DVe" secondAttribute="top" constant="8" id="kKh-SQ-z6F"/>
+                            <constraint firstItem="l5c-mX-IID" firstAttribute="top" secondItem="dqp-sI-DVe" secondAttribute="top" constant="8" id="kgE-Ue-JSE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dqp-sI-DVe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat" id="Iap-ZQ-Mhr"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="KF2-sq-huF" id="7Ff-nj-ikV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dO2-tY-qyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605.5999999999999" y="131.78410794602701"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -77,11 +118,30 @@
                     <connections>
                         <outlet property="passwordTextField" destination="vo3-ba-cNL" id="t2c-ZE-uzm"/>
                         <outlet property="usernameTextField" destination="oS7-EF-oB5" id="N9i-7Q-qrn"/>
+                        <segue destination="UXd-AJ-aht" kind="presentation" identifier="loginSegue" id="tcK-lo-dl1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="125.59999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xp0-sU-TdY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UXd-AJ-aht" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BVc-hb-i3C">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yrW-xQ-It0" kind="relationship" relationship="rootViewController" id="J9M-jz-My9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mO7-kz-caf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801.60000000000002" y="132.23388305847078"/>
         </scene>
     </scenes>
 </document>
