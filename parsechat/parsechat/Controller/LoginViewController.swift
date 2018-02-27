@@ -31,10 +31,9 @@ class LoginViewController: UIViewController {
       self.popUpMessage(title: "Whoops!", message: "Username and password cannot be left empty.", confirmation: "OK")
     } else {
       let newUser = PFUser()
-      
       newUser.username = usernameTextField.text
       newUser.password = passwordTextField.text
-      
+    
       newUser.signUpInBackground { (success, error) in
         if success {
           print("Yay, created a user!")
@@ -50,6 +49,7 @@ class LoginViewController: UIViewController {
   
   @IBAction func onLogin(_ sender: Any) {
     print("Clicked Login")
+    
     PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!) { (user, error) -> Void in
       if user != nil {
         print("You're logged in!")

@@ -31,10 +31,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-Wl-xMd">
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" id="sXV-ZD-pZE" customClass="ChatCell" customModule="parsechat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sXV-ZD-pZE" id="IVz-rC-saT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for giving me the jacket. It was super windy!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pos-zf-ACd">
+                                                    <rect key="frame" x="8" y="8" width="359" height="83.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="pos-zf-ACd" secondAttribute="bottom" constant="8" id="7I8-4m-veK"/>
+                                                <constraint firstItem="pos-zf-ACd" firstAttribute="leading" secondItem="IVz-rC-saT" secondAttribute="leading" constant="8" id="ETo-5K-tKz"/>
+                                                <constraint firstItem="pos-zf-ACd" firstAttribute="top" secondItem="IVz-rC-saT" secondAttribute="top" constant="8" id="MKK-Xr-wDn"/>
+                                                <constraint firstAttribute="trailing" secondItem="pos-zf-ACd" secondAttribute="trailing" constant="8" id="j6m-MO-aSt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chatTextLabel" destination="pos-zf-ACd" id="HjI-jL-ohS"/>
+                                            <outlet property="textLabel" destination="pos-zf-ACd" id="iuR-pl-eQh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="l5c-mX-IID" firstAttribute="leading" secondItem="KF2-sq-huF" secondAttribute="trailing" constant="16" id="3qA-Xt-RAc"/>
+                            <constraint firstItem="mhW-Wl-xMd" firstAttribute="leading" secondItem="dqp-sI-DVe" secondAttribute="leading" id="NhA-5I-h8s"/>
+                            <constraint firstItem="mhW-Wl-xMd" firstAttribute="top" secondItem="KF2-sq-huF" secondAttribute="bottom" constant="8" id="Sbx-h7-147"/>
+                            <constraint firstItem="mhW-Wl-xMd" firstAttribute="trailing" secondItem="dqp-sI-DVe" secondAttribute="trailing" id="aZp-fP-srA"/>
+                            <constraint firstItem="mhW-Wl-xMd" firstAttribute="bottom" secondItem="dqp-sI-DVe" secondAttribute="bottom" id="gtJ-3H-uv0"/>
                             <constraint firstItem="KF2-sq-huF" firstAttribute="leading" secondItem="dqp-sI-DVe" secondAttribute="leading" constant="8" id="iHR-mW-id6"/>
                             <constraint firstItem="dqp-sI-DVe" firstAttribute="trailing" secondItem="l5c-mX-IID" secondAttribute="trailing" constant="16" id="jbC-sl-qnz"/>
                             <constraint firstItem="KF2-sq-huF" firstAttribute="top" secondItem="dqp-sI-DVe" secondAttribute="top" constant="8" id="kKh-SQ-z6F"/>
@@ -44,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="Iap-ZQ-Mhr"/>
                     <connections>
+                        <outlet property="chatTableView" destination="mhW-Wl-xMd" id="BwF-dt-MbO"/>
                         <outlet property="messageTextField" destination="KF2-sq-huF" id="7Ff-nj-ikV"/>
                     </connections>
                 </viewController>
