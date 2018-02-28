@@ -37,7 +37,10 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
+* Required user stories
 <img src='https://image.ibb.co/ijJBtH/parseReq.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+* Refresh, Logout, Sign Up
 <img src='https://image.ibb.co/f1DVLx/parse_Req_Stretch.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
