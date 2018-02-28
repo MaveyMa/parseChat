@@ -23,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       configuration.server = "http://45.79.67.127:1337/parse"
     }))
     
+    // check if user is logged in.
+    if PFUser.current() != nil {
+      // Load and show the home view controller
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let navigationViewController = storyboard.instantiateViewController(withIdentifier: "AuthenticatedViewController")
+      self.window?.rootViewController = navigationViewController
+    }
+    
     return true
   }
 

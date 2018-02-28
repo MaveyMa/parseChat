@@ -31,34 +31,43 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-Wl-xMd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-Wl-xMd">
                                 <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" id="sXV-ZD-pZE" customClass="ChatCell" customModule="parsechat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="146" id="sXV-ZD-pZE" customClass="ChatCell" customModule="parsechat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sXV-ZD-pZE" id="IVz-rC-saT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for giving me the jacket. It was super windy!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pos-zf-ACd">
-                                                    <rect key="frame" x="8" y="8" width="359" height="83.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJL-i8-ZxH">
+                                                    <rect key="frame" x="8" y="8" width="56.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for the jacket! It was really windy today, but I was able to stay warm. :)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tk-M3-gES">
+                                                    <rect key="frame" x="8" y="37" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="pos-zf-ACd" secondAttribute="bottom" constant="8" id="7I8-4m-veK"/>
-                                                <constraint firstItem="pos-zf-ACd" firstAttribute="leading" secondItem="IVz-rC-saT" secondAttribute="leading" constant="8" id="ETo-5K-tKz"/>
-                                                <constraint firstItem="pos-zf-ACd" firstAttribute="top" secondItem="IVz-rC-saT" secondAttribute="top" constant="8" id="MKK-Xr-wDn"/>
-                                                <constraint firstAttribute="trailing" secondItem="pos-zf-ACd" secondAttribute="trailing" constant="8" id="j6m-MO-aSt"/>
+                                                <constraint firstItem="7tk-M3-gES" firstAttribute="top" secondItem="lJL-i8-ZxH" secondAttribute="bottom" constant="8" id="0t3-G6-7fm"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lJL-i8-ZxH" secondAttribute="trailing" constant="8" id="7L6-nx-gfA"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7tk-M3-gES" secondAttribute="bottom" constant="8" id="8CB-Vr-SBT"/>
+                                                <constraint firstItem="lJL-i8-ZxH" firstAttribute="leading" secondItem="IVz-rC-saT" secondAttribute="leading" constant="8" id="8ER-tB-zK9"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7tk-M3-gES" secondAttribute="trailing" constant="8" id="oEw-OA-GXB"/>
+                                                <constraint firstItem="7tk-M3-gES" firstAttribute="leading" secondItem="IVz-rC-saT" secondAttribute="leading" constant="8" id="rT9-TH-lGD"/>
+                                                <constraint firstItem="lJL-i8-ZxH" firstAttribute="top" secondItem="IVz-rC-saT" secondAttribute="top" constant="8" id="xnA-ox-3Bm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="chatTextLabel" destination="pos-zf-ACd" id="HjI-jL-ohS"/>
-                                            <outlet property="textLabel" destination="pos-zf-ACd" id="iuR-pl-eQh"/>
+                                            <outlet property="authorTextLabel" destination="lJL-i8-ZxH" id="nFg-Un-FgF"/>
+                                            <outlet property="chatTextLabel" destination="7tk-M3-gES" id="Dem-Rd-WY8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -78,7 +87,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dqp-sI-DVe"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="Iap-ZQ-Mhr"/>
+                    <navigationItem key="navigationItem" title="Chat" id="Iap-ZQ-Mhr">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="xDW-Ns-iae"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="chatTableView" destination="mhW-Wl-xMd" id="BwF-dt-MbO"/>
                         <outlet property="messageTextField" destination="KF2-sq-huF" id="7Ff-nj-ikV"/>
@@ -165,7 +176,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Xp0-sU-TdY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UXd-AJ-aht" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="AuthenticatedViewController" storyboardIdentifier="AuthenticatedViewController" automaticallyAdjustsScrollViewInsets="NO" id="UXd-AJ-aht" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BVc-hb-i3C">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

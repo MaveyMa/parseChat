@@ -5,7 +5,6 @@
 //  Created by Mavey Ma on 2/26/18.
 //  Copyright © 2018 Mavey Ma. All rights reserved.
 //
-
 import UIKit
 import Parse
 
@@ -19,7 +18,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     chatTableView.delegate = self
     chatTableView.dataSource = self
-    
+    //timer every 1 second
     Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
   }
   
@@ -30,6 +29,17 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let msg = message.msg
     cell.chatTextLabel.text = msg
     
+//    let person = message.author.username
+//    cell.authorTextLabel.text = person
+//
+    if let user = message.author as? PFUser {
+      // User found! update username label with username
+      cell.authorTextLabel.text = user.username
+    } else {
+      // No user found, set default username
+      cell.authorTextLabel.text = "🤖"
+    }
+
     return cell
   }
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +58,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     Message.sendText(withCaption: messageTextField.text) { (success, error) in
       if success {
         print("The message was saved!")
-        print(self.messageTextField.text)
+        //print(self.messageTextField.text)
         self.messageTextField.text = ""
       } else if let error = error {
         print("Problem saving message: \(error.localizedDescription)")
@@ -68,10 +78,9 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     query?.findObjectsInBackground { (Message, error: Error?) -> Void in
       if let messages = Message {
         // do something with the data fetched
-        print(messages)
+        //print(messages)
         // passing over my local posts to my global posts
         self.messages = messages as! [Message]
-        self.chatTableView.reloadData()
       } else {
         // handle error
         print("Failed to retrieve 20 objects from Parse server")
