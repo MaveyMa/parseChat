@@ -28,10 +28,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     refreshControl.addTarget(self, action: #selector(ChatViewController.didPullToRefresh(_:)), for: .valueChanged)
     chatTableView.insertSubview(refreshControl, at: 0)
     
-//    chatTableView.separatorStyle = .none
-//    
-//    bubbleView.layer.cornerRadius = 16
-//    bubbleView.clipsToBounds = true
+    chatTableView.separatorStyle = .none
     
     //timer every 1 second
     Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
@@ -43,6 +40,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     let msg = message.msg
     cell.chatTextLabel.text = msg
+    
+    
     
 //    let person = message.author.username
 //    cell.authorTextLabel.text = person
@@ -107,7 +106,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
       }
     }
     self.chatTableView.reloadData()
-    //self.refreshControl.endRefreshing()
+    self.refreshControl.endRefreshing()
   }
   
   @IBAction func onLogout(_ sender: Any) {

@@ -48,25 +48,39 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for the jacket! It was really windy today, but I was able to stay warm. :)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tk-M3-gES">
-                                                    <rect key="frame" x="8" y="37" width="359" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flB-jo-MzS">
+                                                    <rect key="frame" x="8" y="37" width="359" height="100.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for the jacket! It was really windy today, but I was able to stay warm. :)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tk-M3-gES">
+                                                            <rect key="frame" x="8" y="8" width="343" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7tk-M3-gES" secondAttribute="bottom" constant="8" id="E0L-aa-byH"/>
+                                                        <constraint firstItem="7tk-M3-gES" firstAttribute="leading" secondItem="flB-jo-MzS" secondAttribute="leading" constant="8" id="UD2-3o-h7x"/>
+                                                        <constraint firstItem="7tk-M3-gES" firstAttribute="top" secondItem="flB-jo-MzS" secondAttribute="top" constant="8" id="VYT-DR-Q86"/>
+                                                        <constraint firstAttribute="trailing" secondItem="7tk-M3-gES" secondAttribute="trailing" constant="8" id="WjG-7F-b2c"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="7tk-M3-gES" firstAttribute="top" secondItem="lJL-i8-ZxH" secondAttribute="bottom" constant="8" id="0t3-G6-7fm"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lJL-i8-ZxH" secondAttribute="trailing" constant="8" id="7L6-nx-gfA"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7tk-M3-gES" secondAttribute="bottom" constant="8" id="8CB-Vr-SBT"/>
                                                 <constraint firstItem="lJL-i8-ZxH" firstAttribute="leading" secondItem="IVz-rC-saT" secondAttribute="leading" constant="8" id="8ER-tB-zK9"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7tk-M3-gES" secondAttribute="trailing" constant="8" id="oEw-OA-GXB"/>
-                                                <constraint firstItem="7tk-M3-gES" firstAttribute="leading" secondItem="IVz-rC-saT" secondAttribute="leading" constant="8" id="rT9-TH-lGD"/>
+                                                <constraint firstItem="flB-jo-MzS" firstAttribute="leading" secondItem="lJL-i8-ZxH" secondAttribute="leading" id="Ii0-Dg-aDZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="flB-jo-MzS" secondAttribute="bottom" constant="8" id="cdP-8W-hs2"/>
+                                                <constraint firstItem="flB-jo-MzS" firstAttribute="leading" secondItem="IVz-rC-saT" secondAttribute="leading" constant="8" id="fcH-R1-3Bv"/>
+                                                <constraint firstAttribute="trailing" secondItem="flB-jo-MzS" secondAttribute="trailing" constant="8" id="oAX-6y-lVG"/>
+                                                <constraint firstItem="flB-jo-MzS" firstAttribute="top" secondItem="lJL-i8-ZxH" secondAttribute="bottom" constant="8" id="oiz-81-PGs"/>
                                                 <constraint firstItem="lJL-i8-ZxH" firstAttribute="top" secondItem="IVz-rC-saT" secondAttribute="top" constant="8" id="xnA-ox-3Bm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="authorTextLabel" destination="lJL-i8-ZxH" id="nFg-Un-FgF"/>
+                                            <outlet property="bubbleView" destination="flB-jo-MzS" id="1b1-pi-eNI"/>
                                             <outlet property="chatTextLabel" destination="7tk-M3-gES" id="Dem-Rd-WY8"/>
                                         </connections>
                                     </tableViewCell>
